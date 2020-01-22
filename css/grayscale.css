@@ -5,10 +5,91 @@
 
 span.logo {
     font-family: 'Smoothie Shoppe';
-    font-size: 30px;
+    font-size: /*30px;*/1.7em;
     color: #019aaa;
 }
 
+.navbar-toggle span.icon-bar {
+    background: black;
+    color: black;
+    width: 30px;
+    height: 3px;
+}
+
+@media (max-width: 767px) { 
+.navbar-toggle {
+  display: block;
+}
+
+/* Navbar Toggle Extension */
+.navbar-toggle {
+  line-height: 1;
+}
+.navbar-toggle.navbar-toggle-left {
+  float: left;
+  margin-left: 15px;
+}
+.navbar-toggle-label {
+  display: inline-block;
+  vertical-align: top;
+  color: #888;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.navbar-toggle-label + .navbar-toggle-icon {
+  margin-left: 4px;
+}
+.navbar-inverse .navbar-toggle-label {
+  color: #fff;
+}
+.navbar-toggle-icon {
+  display: inline-block;
+}
+.navbar-toggle-icon > .icon-bar + .icon-bar {
+  margin-top: 0;
+}
+/* Icon 1 */
+.navbar-toggle-icon {
+  position: relative;
+  width: 22px;
+  height: 14px;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.navbar-toggle-icon span {
+  display: block;
+  position: absolute;
+  opacity: 1;
+  left: 0;
+  transition: 0.25s ease-in-out;
+}
+.navbar-toggle.collapsed .icon-bar:nth-child(1) {
+  top: 0;
+}
+.navbar-toggle.collapsed .icon-bar:nth-child(2) {
+  top: 6px;
+}
+.navbar-toggle.collapsed .icon-bar:nth-child(3) {
+  top: 12px;
+}
+.navbar-toggle:not(.collapsed) .icon-bar:nth-child(1) {
+  top: 6px;
+  transform: rotate(45deg);
+}
+.navbar-toggle:not(.collapsed) .icon-bar:nth-child(2) {
+  opacity: 0;
+}
+.navbar-toggle:not(.collapsed) .icon-bar:nth-child(3) {
+  top: 6px;
+  transform: rotate(-45deg);
+}
+    
+    
+    
+    
+}
 /*span.logo:after, span.logo:before {
   content: "";
   width: 100%;
@@ -152,7 +233,7 @@ figure.snip1480 {
   overflow: hidden;
   margin: 10px;
   min-width: 230px;
-  max-width: 315px;
+  max-width: /*315px;*/100%;
   width: 100%;
   color: #ffffff;
   text-align: left;
@@ -326,10 +407,11 @@ a:focus, a:hover {
   font-family: /*"Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;*/'Open Sans';
   margin-bottom: 0;
   /*text-transform: uppercase;*/
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  /*border-bottom: 1px solid rgba(255, 255, 255, 0.3);*/
   /*background-color: black;*/
-  background:rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
-  /*font-weight:bold;*/
+  background: white;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    z-index: 999 !important;
 }
 
 #mainNav .navbar-toggler {
@@ -409,7 +491,8 @@ a:focus, a:hover {
     padding-bottom: 5px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     background: white;/*rgba(0, 0, 0, 0.8) none repeat scroll 0 0;*/
-      border-bottom: 1px solid #eaeced;
+      /*border-bottom: 1px solid #eaeced;*/
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
 }
   }
   #mainNav .nav-link.active {
