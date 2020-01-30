@@ -22,7 +22,61 @@
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
+/*==========================Modal=============================*/
+.modal-body {
+    /*display: inline-block;*/
+    display: flex;
+        color: #101010;
+}
+.modal-content {
+    border-radius: 0;
+}
+h4.modal-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #101010;
+}
+p.mais {
+    padding-bottom: 20px;
+    line-height: 25px;
+    font-size: 16px;
+}
 
+.box{
+	height: 350px;
+    width: 100%;
+	overflow: hidden;
+}
+.box img{
+	height: 100%;
+	width: 100%;
+	object-fit:cover;
+	-o-object-fit:cover;
+}
+
+.box2{
+	height: 550px;
+    width: 100%;
+	overflow: hidden;
+}
+.box2 img{
+	height: 100%;
+	width: 100%;
+	object-fit:cover;
+	-o-object-fit:cover;
+}
+.padding-left-projetos {
+    padding-left: 15px !important;
+}
+.padding-top-projetos {
+    margin-top: 15px;
+}
+.col-md-7.padding-top-projetos.padding-left-projetos, .col-md-5.padding-top-projetos {
+    display: inline-flex;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
 
 /*=======================Quem Somos===========================*/
 .no-gutters {
@@ -42,7 +96,7 @@
     text-shadow: none;
     font-size: 20px;
     text-align: /*center !important;*/left;
-    padding: 5% 7%;
+    padding: 4.5% 9%;
 }
 .super-heading-quemsomos h3{
     text-transform: uppercase;
@@ -629,7 +683,7 @@ figure.snip1480.hover figcaption {
   display: none;
   position: fixed;
   z-index: 9999;
-  padding-top: 100px;
+  /*padding-top: 100px;*/
   left: 0;
   top: 0;
   width: 100%; 
@@ -642,7 +696,7 @@ figure.snip1480.hover figcaption {
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%;
+  /*width: 80%;*/
   max-width: 700px;
 }
 
@@ -657,7 +711,7 @@ figure.snip1480.hover figcaption {
   height: 150px;
 }
 
-.modal-content, #caption { 
+/*.modal-content, #caption { 
   animation-name: zoom;
   animation-duration: 0.6s;
 }
@@ -665,7 +719,7 @@ figure.snip1480.hover figcaption {
 @keyframes zoom {
   from {transform:scale(0)} 
   to {transform:scale(1)}
-}
+}*/
 
 .close {
   position: absolute;
@@ -676,6 +730,14 @@ figure.snip1480.hover figcaption {
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
+    /*float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;*/
 }
 
 .close:hover,
@@ -2727,7 +2789,7 @@ time > .year {
 /***********************************************/
 
 #myModal {
-    background-color: /*rgba(103,119,137,.7);*/rgba(0,0,0,.9);
+    background-color: rgba(0,0,0,.9);
     text-align:center;
 }
 
@@ -2736,8 +2798,11 @@ modal-title {
     font-weight:bold;
 }
 
-@media (min-width: 768px) {
-    #myModal .modal-dialog {
+@media (max-width: 767px) {
+    .padding-left-projetos {
+    padding-left: 0px !important;
+    }}
+   /* #myModal .modal-dialog {
         webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
         box-shadow: 0 5px 15px rgba(0,0,0,.5);
 		-webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
@@ -2765,7 +2830,7 @@ modal-title {
     background-color:#000;
     border-radius: 0 0 5px 5px;
     text-align:center;
-}
+}*/
 
 
 /***********************************************/
