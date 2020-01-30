@@ -3,6 +3,96 @@
 
 
 
+
+/*=======================Quem Somos===========================*/
+.no-gutters {
+   margin-right: 0;
+   margin-left: 0;
+    padding-right: 0;
+   padding-left: 0;
+}
+.no-gutters > [class^="col-"],
+.no-gutters > [class*=" col-"] {
+   padding-right: 0;
+   padding-left: 0;
+}
+.super-heading-quemsomos {
+    margin: 0 auto;
+    letter-spacing: 1px;
+    text-shadow: none;
+    font-size: 20px;
+    text-align: /*center !important;*/left;
+    padding: 5% 7%;
+}
+.super-heading-quemsomos h3{
+    text-transform: uppercase;
+    color: #464646;
+    border-bottom: 2px solid #D9D8D8;
+    padding-bottom: 5px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.super-heading-quemsomos h4{
+    color: #464646;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-top: 25px;
+}
+.super-heading-quemsomos p{
+    color: #9d9c9a;
+    padding-top: 20px;
+    line-height: 30px;
+    font-size: 18px;
+}
+.title-pagina2 {
+    float: left;
+    text-transform: uppercase;
+    font-size: 25px;
+    border-bottom: 2px solid #99cc33;
+    width: 45%;
+    text-align: left;
+    margin-bottom: 50px;
+    margin-top:50px;
+    padding-bottom: 10px;
+}
+img.img-full {
+    width: 100%;
+}
+
+
+
+
+/*==========================Servicos==========================*/
+.quemsomos {
+    padding-top:150px;
+    display: flex;
+    background: #f5f5f5;
+}
+
+#titlefoto {
+    position: absolute;
+    margin-top: -80px;
+    right: 15%;
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.title-pagina {
+    float: right;
+    text-transform: uppercase;
+    font-size: 25px;
+    border-bottom: 2px solid /*#99cc33;*/#019aaa;
+    color:#000;
+    width: /*45%;*/100%;
+    text-align: right;
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+}
+
+
 span.logo {
     font-family: 'Smoothie Shoppe';
     font-size: /*30px;*/1.7em;
@@ -17,6 +107,18 @@ span.logo {
 }
 
 @media (max-width: 767px) { 
+    
+    .super-heading-quemsomos {
+    margin: 0 auto;
+    letter-spacing: 1px;
+    text-shadow: none;
+    font-size: 20px;
+    text-align: center;
+    padding: 5% 7%;
+}
+    
+    
+    
 .navbar-toggle {
   display: block;
 }
@@ -86,7 +188,15 @@ span.logo {
   transform: rotate(-45deg);
 }
     
-    
+ /* .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 280px; 
+    height: 100%;
+}*/
+  
    
     
     #navbar {
@@ -184,7 +294,8 @@ h2.heading.clearfix {
     color: #222;
     font-weight: 600;
     line-height: 1.5;
-    margin: 0 0 12px;
+    /*margin: 0 0 12px;*/
+    margin: 0 0 -10px;
     text-align: center;
 }
 
@@ -497,7 +608,7 @@ figure.snip1480.hover figcaption {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 9999;
   padding-top: 100px;
   left: 0;
   top: 0;
@@ -541,6 +652,7 @@ figure.snip1480.hover figcaption {
   top: 15px;
   right: 35px;
   color: #f1f1f1;
+    opacity: 1;
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
@@ -618,10 +730,10 @@ figure.snip1480.hover figcaption {
 ******************************/
 .get-in-touch {
   /*max-width: 800px;*/
-  padding-top: 50px;
+  padding-top: 80px;
     padding-bottom: 50px;
   position: relative;
-    background: #f5f5f5;
+    background: /*#f5f5f5;*/#fff;
 
 }
 .get-in-touch .title {
@@ -1935,7 +2047,7 @@ img::-moz-selection {
 }
 
 #gallery {
-	background-color:/*#9c9c9c;*/#fff;
+	background-color:/*#fff*/#f5f5f5;
         padding-top: 150px;
     padding-bottom: 100px;
 }
@@ -2595,7 +2707,7 @@ time > .year {
 /***********************************************/
 
 #myModal {
-    background-color: rgba(103,119,137,.7);
+    background-color: /*rgba(103,119,137,.7);*/rgba(0,0,0,.9);
     text-align:center;
 }
 
