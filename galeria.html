@@ -46,10 +46,10 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul id="nav" class="nav navbar-nav">
-                    <li><a href="quem-somos.html">Quem Somos</a></li>
-                    <li><a href="servicos.html">Serviços</a></li>
-                    <li><a href="galeria.html">Galeria</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a class="cool-link" href="quem-somos.html">Quem Somos</a></li>
+                    <li><a class="cool-link" href="servicos.html">Serviços</a></li>
+                    <li><a class="cool-link active" href="galeria.html">Galeria</a></li>
+                    <li><a class="cool-link" href="#contato">Contato</a></li>
                 </ul>
             </div><!-- /.nav-collapse -->
         </div><!-- /.container -->
@@ -216,31 +216,45 @@
     </div>
 
 
-    <section id="contato" class="get-in-touch">
+     <section id="contato" class="get-in-touch">
+
 
         <div class="container">
             <h2 class="heading clearfix" style="">Contato</h2>
-            <form class="contact-form row">
+                <form class="contact-form row" method="post" id="contactform" onSubmit="javascript:validate()" action="enviar.php" role="form">
+                <div class="form-field col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div class="input-group">
+                    <label class="label">Nome</label>
+                    <input class="input-text js-input" name="nome" type="text" id="nome" />
+                  </div>
+                  <p class="help-block hidden">Por favor o nome deve conter 3 caracteres ou mais.</p>
+                </div>
+                <div class="form-field col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                  <div class="input-group">
+                    <label class="label">Email</label>
+                    <input class="input-text js-input" name="email" type="email" id="email" />
+                  </div>
+                  <p class="help-block hidden">Por favor entre com um email válido.</p>
+                </div>
+                <div class="form-field col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                  <div class="input-group">
+                    <label class="label">Telefone</label>
+                    <input class="input-text js-input" name="telefone" type="text" id="telefone"/>
+                  </div>
+                  <p class="help-block hidden">Por favor entre com um número de telefone válido.</p>
+                </div>
+                <div class="form-field col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div class="input-group">
+                    <label class="label">Mensagem</label>
+                    <textarea class="input-text js-input" name="mensagem" id="mensagem"></textarea>
+                  </div>
+                  <p class="help-block hidden">Por favor digite sua mensagem</p>
+                </div>
                 <div class="form-field col-lg-12">
-                    <input id="name" class="input-text js-input" type="text" required>
-                    <label class="label" for="name">Nome</label>
+                    <!--<input class="submit-btn" type="submit" value="Enviar">-->
+                    <input class="submit-btn" type="submit" value="Enviar" name="BTEnvia" id="enviar">
                 </div>
-                <div class="form-field col-lg-6 ">
-                    <input id="email" class="input-text js-input" type="email" required>
-                    <label class="label" for="email">E-mail</label>
-                </div>
-                <div class="form-field col-lg-6 ">
-                    <input id="phone" class="input-text js-input" type="text" required>
-                    <label class="label" for="phone">Telefone</label>
-                </div>
-                <div class="form-field col-lg-12">
-                    <input id="message" class="input-text js-input" type="text" required>
-                    <label class="label" for="message">Messagem</label>
-                </div>
-                <div class="form-field col-lg-12">
-                    <input class="submit-btn" type="submit" value="Enviar">
-                </div>
-            </form>
+              </form>
         </div>
     </section>
 
@@ -259,7 +273,7 @@
                         </ul>
                     </div>
 
-                    <p>© 2019 Adriana Gourmet - Todos os direitos reservados</p>
+                    <p>2019 © Adriana Gourmet - Todos os direitos reservados</p>
 
 
 
@@ -286,6 +300,7 @@
     <!-- Custom scripts for this template -->
     <script src="js/grayscale.min.js"></script>
     <script src="js/jquery.appear.js"></script><!-- contador personalizado -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 
     <script>
         $(document).ready(function() {
@@ -391,9 +406,6 @@
 
 
 
-
-
-
         $(document).ready(function() {
 
             $('.navbar-toggle').click(function(e) {
@@ -409,54 +421,64 @@
             });
 
         });
+        
+        
+        
+        
+        var showErrorSuccess = function(element, status) {
+  if (status === false) {
+    element.parent().next().removeClass('hidden').parent().addClass('has-error');
+    return false;
+  }
+  element.parent().next().addClass('hidden').parent().removeClass('has-error').addClass('has-success');
+};
 
+var validate = function() {
+  event.preventDefault();
+  //validate name
+  var name = $('#nome').val();
+  if (name.length < 3) {
+    return showErrorSuccess($('#nome'), false);
+  }
+  showErrorSuccess($('#nome'));
 
+  /*var lastname = $('#lastname').val();
+  if (lastname.length < 3) {
+    return showErrorSuccess($('#lastname'), false);
+  }
+  showErrorSuccess($('#lastname'));*/
 
+  //validate email
+  var email = $('#email').val(),
+    emailReg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/
+  if (!emailReg.test(email) || email == '') {
+    return showErrorSuccess($('#email'), false);
+  }
+  showErrorSuccess($('#email'));
 
+  //validate telefone
+  var telefone = $('#telefone').val(),
+    intRegex = /[0-9 -()+]+$/;
+  if ((telefone.length < 6) || (!intRegex.test(telefone))) {
+    return showErrorSuccess($('#telefone'), false);
+  }
+  showErrorSuccess($('#telefone'));
+};
+        
+       
+        
+        $(document).ready(function(){
+  var SPMaskBehavior = function (val) {
+    return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+  },
+  spOptions = {
+    onKeyPress: function(val, e, field, options) {
+        field.mask(SPMaskBehavior.apply({}, arguments), options);
+      }
+  };
 
-
-
-        $(document).ready(function() {
-
-            $(".filter-button").click(function() {
-                var value = $(this).attr('data-filter');
-
-                if (value == "all") {
-                    //$('.filter').removeClass('hidden');
-                    $('.filter').show('1000');
-                } else {
-                    //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-                    //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-                    $(".filter").not('.' + value).hide('3000');
-                    $('.filter').filter('.' + value).show('3000');
-
-                }
-            });
-
-            if ($(".filter-button").removeClass("active")) {
-                $(this).removeClass("active");
-            }
-            $(this).addClass("active");
-
-        });
-
-        $(document).ready(function() {
-
-            $('.link-gallery').click(function() {
-                var descripcion = $(this).attr('title');
-                $('#caption').html(descripcion);
-                var img = $(this).find('img');
-                var src = img.attr('src')
-                $('#img01').attr('src', src);
-                $('#myModal').css('display', 'block');
-                $('.modal-backdrop').remove();
-            });
-
-            $('.close').click(function() {
-                $('#myModal').css('display', 'none');
-            });
-
-        });
+  $('#telefone').mask(SPMaskBehavior, spOptions);
+});
     </script>
 
 
