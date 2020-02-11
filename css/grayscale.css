@@ -22,6 +22,38 @@
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
+
+/*========================CUSTOMIZACAO INPUTS========================*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #000;
+  -webkit-box-shadow: 0 0 0px 1000px #FFF inset;
+}
+
+
+
+/*========================PLACEHOLDER========================*/
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #019aaa;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #019aaa;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #019aaa;
+}
+
+
 /*==========================Modal=============================*/
 .modal-body {
     /*display: inline-block;*/
@@ -40,6 +72,7 @@ p.mais {
     padding-bottom: 20px;
     line-height: 25px;
     font-size: 16px;
+    text-align: left;
 }
 
 .box{
@@ -153,6 +186,7 @@ img.img-full {
     letter-spacing: 1px;
     color: #fff;
     font-weight: bold;
+        z-index: 2;
 }
 
 .title-pagina {
@@ -170,7 +204,7 @@ img.img-full {
 
 span.logo {
     font-family: 'Smoothie Shoppe';
-    font-size: /*30px;*/1.7em;
+    font-size: /*30px;*/1.9em;
     color: #019aaa;
 }
 
@@ -576,6 +610,22 @@ figure.snip1480.hover figcaption {
   transition: all 0.5s ease-in-out 0s;
 }
 
+
+/*.blend-img{
+    display: block;
+    position: relative;
+}
+.blend-img:after {
+  content:"";
+  background:rgba(0,0,0,.4);
+  width:100%;
+  height:100%;
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:1;
+}*/
+
 .box:hover img{
   transform: scale(1.1);
   -webkit-transition: all 0.5s ease-in-out 0s;
@@ -835,23 +885,38 @@ figure.snip1480.hover figcaption {
     -webkit-text-fill-color: transparent !important;
 }
 
+/*.input-group {
+    display: block;
+}*/
+form#contactform {
+    padding-top: 30px;
+}
+
 .contact-form .form-field {
   position: relative;
-  margin: 32px 0;
+  margin: 30px 0;
+    /*margin-top: 32px;*/
+    padding-left: 30px;
+    padding-right: 30px;
+    display: grid;
 }
 .contact-form .input-text {
   display: block;
   width: 100%;
-  height: 36px;
+  height: /*36px;*/28px;
   border-width: 0 0 2px 0;
   border-color: /*#5543ca;*/#019aaa;
   font-size: 18px;
   line-height: 26px;
   font-weight: 400;
     background: transparent;
+    color: #777;
 }
 .contact-form .input-text:focus {
   outline: none;
+}
+.contact-form .input-text:focus-within,, .contact-form .input-text:focus, .contact-form .input-text:visited {
+    background: #fff;
 }
 .contact-form .input-text:focus + .label,
 .contact-form .input-text.not-empty + .label {
@@ -860,10 +925,10 @@ figure.snip1480.hover figcaption {
 }
 .contact-form .label {
   position: absolute;
-  left: 20px;
+  left: /*20px;*/-11px;
   bottom: 11px;
   font-size: 18px;
-  line-height: 26px;
+  line-height: /*26px;*/35px;
   font-weight: 400;
   color: /*#5543ca;*/#019aaa;
   cursor: text;
@@ -885,6 +950,8 @@ figure.snip1480.hover figcaption {
   border: none;
   width:200px;
   cursor: pointer;
+        /*margin-left: 15px;*/
+        /*margin-top: 32px;*/
 }
 
 
@@ -1007,7 +1074,7 @@ a:focus, a:hover {
 
 .navbar-nav>li a {
     text-transform: uppercase;
-    font-weight: bold;
+    /*font-weight: bold;*/
     color: #313131;
 }
 
@@ -1029,10 +1096,11 @@ a:focus, a:hover {
 }
 
 #mainNav .navbar-nav > li > a:hover, #mainNav .navbar-nav > li > a:active{
-    /*color: #fff;*/
+    color: #019aaa;
     /*background-color: #417630;*/
 	outline: none;
-    
+    /*height: 40px;*/
+    /*border-bottom: 1px solid #019aaa;*/
 }
 .navbar-nav li a:hover, .navbar-nav > .active > a {
   color: /*#fff !important;*/#313131;
@@ -1047,7 +1115,42 @@ a:focus, a:hover {
     color: #fff;
     background: #417630;
 }*/
+@media (min-width: 767px) {
+.cool-link {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
 
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #019aaa;
+    transition: width .3s;
+        /*margin-top: -10px;*/
+}
+    
+    a.cool-link.active::after{
+        content: '';
+    display: block;
+    width: auto;
+    height: 1px;
+    background: #019aaa;
+    transition: width .3s;
+    }
+    a.cool-link.active{
+        color:#019aaa;
+         display: inline-block;
+        text-decoration: none;
+    }
+
+.cool-link:hover::after {
+    width: 100%;
+    /*transition: width .3s;*/
+}
+}
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 25px;
