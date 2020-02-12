@@ -1047,7 +1047,7 @@ form#contactform {
     /*margin-top: 32px;*/
     padding-left: 30px;
     padding-right: 30px;
-    display: grid;
+    display: inline-grid;
 }
 .contact-form .input-text {
   display: block;
