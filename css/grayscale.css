@@ -11,140 +11,6 @@
     background: #019aaa;
 }
 
-.footer-top-layout {
-  background: /*#242424*//*#019aaa*/#01919a none repeat scroll 0 0;
-  color: #ffffff;
-}
-
-footer#footer-Section {
-    padding: 120px 0px 0px 0px;
-}
-
-.footer-top-layout h4 {
-  color: #ffffff;
-  font-size: 18px;
-  margin-bottom: 21px;
-}
-
-.post-blog-date::after {
-  background: #ffffff none repeat scroll 0 0;
-  bottom: 0;
-  content: "";
-  height: 4px;
-  left: 0;
-  margin: auto;
-  position: absolute;
-  right: 0;
-  width: 50px;
-}
-.post-blog-date {
-  padding-bottom: 25px;
-  position: relative;
-}
-
-
-
-.footer-top-layout [class*="col-sm-"]:first-child {
-  padding: 0;
-}
-/*.footer-top-layout [class*="col-sm-"] {
-  border-right: 2px solid #333333;
-  padding: 0 0 0 28px;
-  
-}*/
-.footer-top-layout {
-  color: #ffffff;
-}
-.footer-col-item {
-  min-height: 140px;
-}
-
-address {
-  color: /*#545454;*/#fff;
-}
-
-
-.footer-top-layout [class*="col-sm-"]:last-child {
-  border-right: medium none;
-} 
-.footer-top-layout {
-  color: #ffffff;
-}
-
-.footer-top-layout h4 {
-  color: #ffffff;
-  font-size: 18px;
-  margin-bottom: 21px;
-}
-
-
-.footer-col-item .item-contact a {
-  color: /*#545454;*/#fff;
-  display: inline-block;
-  margin-bottom: 7px;
-  width: 100%;
-}
-
-.footer-col-item .item-contact a .link-id {
-  color: #ffffff;
-  margin-left: 0;
-  margin-right: 6px;
-}
-.footer-col-item span {
-  margin-left: 7px;
-}
-.footer-col-item .item-contact a {
-  color: /*#545454;*/#fff;
-}
-
-.footer-top-layout h4 {
-  color: #ffffff;
-  font-size: 18px;
-  margin-bottom: 21px;
-}
-.signUpNewsletter {
-  position: relative;
-}
-.signUpNewsletter .gt-email {
-  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-  border: 1px solid /*#666666;*/#fff;
-  border-radius: 0;
-  color: #ffffff;
-  height: 52px;
-}
-.signUpNewsletter .btn-go {
-  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-  border-color: /*#666666;*/#fff;
-  border-style: solid;
-  border-width: 0 0 0 1px;
-  bottom: 0;
-  color: #ffffff;
-  font-size: 16px;
-  position: absolute;
-  right: 0;
-  /*text-transform: uppercase;*/
-  top: 0;
-  width: 72px;
-}
-.footer-bottom-layout {
-  background: #222222 none repeat scroll 0 0;
-  padding: 20px 0;
-  margin-top: 100px;
-  text-align: center;
-}
-
-.socialMedia-footer {
-  margin-bottom: 20px;
-}
-.socialMedia-footer > a {
-  display: inline-block;
-  margin: 0 8px;
-}
-.footer-bottom-layout {
-  text-align: center;
-}
-
-
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @font-face {font-family:"Smoothie Shoppe";src:url("../fonts/Smoothie_Shoppe.eot?") format("eot"),url("../fonts/Smoothie_Shoppe.woff") format("woff"),url("../fonts/Smoothie_Shoppe.ttf") format("truetype"),url("../fonts/Smoothie_Shoppe.svg#Smoothie_Shoppe") format("svg");font-weight:normal;font-style:normal;}
 
@@ -1460,7 +1326,7 @@ margin: 0 auto;
 
 footer {
   padding:120px 0px 100px 0px;
-  background:/*#242424;*//*#019aaa;*/#01919a;
+  background:#242424;/*#019aaa;*//*#01919a;*/
   /*height:300px;*/
 }
 
