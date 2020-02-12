@@ -661,9 +661,9 @@ figure.snip1480 h3 {
   font-weight: 400;
   text-transform: uppercase;
 }
-/*figure.snip1480:before {*/
+figure.snip1480:before {
   /*background: rgba(42, 128, 185, 0.75);*/
-    /*background-color: #019aaa;
+    background-color: #019aaa;
     opacity: 0.75;
   content: "";
   left: 0;
@@ -673,15 +673,18 @@ figure.snip1480 h3 {
   position: absolute;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-}*/
-figure.snip1480 i {
+}
+figure.snip1480 i, figure.snip1480 p {
   position: absolute;
-  font-size: 3.5em;
+  font-size: 1em;
   left: 50%;
-  top: 50%;
+  top: 15%;
   -webkit-transform: translate(-50%, -50px);
   transform: translate(-50%, -50px);
   opacity: 0;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
 }
 figure.snip1480 a {
   left: 0;
@@ -695,7 +698,7 @@ figure.snip1480:hover:before,
 figure.snip1480.hover:before {
   bottom: 0;
 }
-figure.snip1480:hover i,
+figure.snip1480:hover i, figure.snip1480:hover p, figure.snip1480.hover p,
 figure.snip1480.hover i {
   opacity: 1;
 }
