@@ -952,6 +952,11 @@ form#contactform {
   transition: transform .2s ease-in-out, 
   -webkit-transform .2s ease-in-out;
 }
+
+.contact-form .input-group {
+    display: block;
+}
+
 .contact-form .submit-btn {
   display: inline-block;
   /*background-color: #000;
