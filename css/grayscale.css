@@ -550,7 +550,7 @@ h2.heading.clearfix {
     font-weight: 600;
     line-height: 1.5;
     /*margin: 0 0 12px;*/
-    margin: 0 0 -10px;
+    /*margin: 0 0 -10px;*/
     text-align: center;
 }
 
