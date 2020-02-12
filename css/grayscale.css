@@ -12,7 +12,7 @@
 }
 
 .footer-top-layout {
-  background: /*#242424*/#019aaa none repeat scroll 0 0;
+  background: /*#242424*//*#019aaa*/#01919a none repeat scroll 0 0;
   color: #ffffff;
 }
 
@@ -1460,7 +1460,7 @@ margin: 0 auto;
 
 footer {
   padding:120px 0px 100px 0px;
-  background:/*#242424;*/#019aaa;
+  background:/*#242424;*//*#019aaa;*/#01919a;
   /*height:300px;*/
 }
 
