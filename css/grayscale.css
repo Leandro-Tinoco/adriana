@@ -530,7 +530,7 @@ figure.snip1480 h3 {
 figure.snip1480:before {
   /*background: rgba(42, 128, 185, 0.75);*/
     background-color: #019aaa;
-    opacity: 0.75;
+    opacity: /*0.75;*/0.85;
   content: "";
   left: 0;
   right: 0;
