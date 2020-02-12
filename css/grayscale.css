@@ -12,7 +12,7 @@
 }
 
 .footer-top-layout {
-  background: #242424 none repeat scroll 0 0;
+  background: /*#242424*/#019aaa none repeat scroll 0 0;
   color: #ffffff;
 }
 
