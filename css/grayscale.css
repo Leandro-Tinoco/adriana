@@ -1015,7 +1015,7 @@ figure.snip1480.hover figcaption {
   padding-top: 80px;
     padding-bottom: 50px;
   position: relative;
-    background: /*#f5f5f5;*/#fff;
+    background: /*#f5f5f5;*/#fff;    width: 100%;
 
 }
 .get-in-touch .title {
