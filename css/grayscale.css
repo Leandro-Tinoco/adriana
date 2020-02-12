@@ -60,7 +60,7 @@ footer#footer-Section {
 }
 
 address {
-  color: #545454;
+  color: /*#545454;*/#fff;
 }
 
 
@@ -79,7 +79,7 @@ address {
 
 
 .footer-col-item .item-contact a {
-  color: #545454;
+  color: /*#545454;*/#fff;
   display: inline-block;
   margin-bottom: 7px;
   width: 100%;
@@ -94,7 +94,7 @@ address {
   margin-left: 7px;
 }
 .footer-col-item .item-contact a {
-  color: #545454;
+  color: /*#545454;*/#fff;
 }
 
 .footer-top-layout h4 {
@@ -107,14 +107,14 @@ address {
 }
 .signUpNewsletter .gt-email {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-  border: 1px solid #666666;
+  border: 1px solid /*#666666;*/#fff;
   border-radius: 0;
   color: #ffffff;
   height: 52px;
 }
 .signUpNewsletter .btn-go {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-  border-color: #666666;
+  border-color: /*#666666;*/#fff;
   border-style: solid;
   border-width: 0 0 0 1px;
   bottom: 0;
@@ -129,7 +129,7 @@ address {
 .footer-bottom-layout {
   background: #222222 none repeat scroll 0 0;
   padding: 20px 0;
-  margin-top: 30px;
+  margin-top: 100px;
   text-align: center;
 }
 
@@ -1460,7 +1460,7 @@ margin: 0 auto;
 
 footer {
   padding:120px 0px 100px 0px;
-  background:/*url("../img/background-footer.jpg");*/#242424;
+  background:/*#242424;*/#019aaa;
   /*height:300px;*/
 }
 
